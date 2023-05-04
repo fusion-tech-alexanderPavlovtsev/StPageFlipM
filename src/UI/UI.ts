@@ -169,7 +169,7 @@ export abstract class UI {
     private checkTarget(targer: EventTarget): boolean {
         if (!this.app.getSettings().clickEventForward) return true;
 
-        if (['a', 'button'].includes((targer as HTMLElement).tagName.toLowerCase())) {
+        if (['a', 'button', 'div', 'form', 'input', 'video'].includes((targer as HTMLElement).tagName.toLowerCase())) {
             return false;
         }
 
